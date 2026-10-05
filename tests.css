@@ -1,0 +1,20 @@
+.btn:disabled { opacity: .45; cursor: not-allowed; box-shadow: none; }
+.hud { display: flex; justify-content: space-between; gap: 1rem; font-size: .9rem; color: var(--muted); margin-bottom: .75rem; }
+.nav-row { display: flex; justify-content: space-between; gap: .75rem; margin-top: 1.25rem; }
+.big { font: 700 5rem/1 var(--font-head); text-align: center; margin: 1.5rem 0; color: var(--ink); }
+.countdown { font: 700 6rem/1 var(--font-head); text-align: center; color: var(--indigo); padding: 2rem 0; }
+.arena { min-height: 280px; display: grid; place-items: center; text-align: center; border-radius: var(--radius); padding: 1rem; color: #fff; font: 600 1.4rem var(--font-head); cursor: pointer; user-select: none; touch-action: manipulation; }
+.arena--idle, .arena--between, .arena--done { background: var(--slate); } .arena--wait { background: var(--rose); } .arena--go { background: #0b7a3b; } .arena--early { background: var(--amber); }
+.tiles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; max-width: 320px; margin: 1rem auto 1.5rem; }
+.tile { aspect-ratio: 1; border-radius: 12px; border: 2px solid var(--line); background: var(--indigo-soft); cursor: pointer; transition: background .15s, box-shadow .15s; }
+.tile:disabled { cursor: default; } .tile.is-lit { background: var(--indigo); box-shadow: 0 0 22px rgba(59,58,184,.55); }
+.opts { display: grid; gap: .6rem; grid-template-columns: repeat(auto-fit, minmax(min(100%, 130px), 1fr)); margin: 1rem 0; }
+.opts--stack { grid-template-columns: 1fr; }
+.opt { min-height: 48px; padding: .7rem 1rem; font: 600 1rem var(--font-body); color: var(--ink); background: var(--surface); border: 2px solid var(--line); border-radius: 12px; cursor: pointer; text-align: left; transition: border-color .15s, background .15s; }
+.opt:hover { border-color: var(--indigo); } .opt.is-selected { border-color: var(--indigo); background: var(--indigo-soft); color: var(--indigo); }
+.stroop-word { font: 700 clamp(3rem, 14vw, 5rem)/1.1 var(--font-head); text-align: center; margin: 1.5rem 0; }
+.chips { display: flex; flex-wrap: wrap; gap: .6rem; margin: 1rem 0 1.5rem; }
+.chip { font: 600 1.2rem var(--font-head); padding: .6rem 1.1rem; background: var(--indigo-soft); color: var(--indigo); border-radius: 999px; }
+.timerbar { height: 8px; background: var(--indigo); border-radius: 999px; animation: shrink 8s linear forwards; }
+@keyframes shrink { from { width: 100%; } to { width: 0; } }
+.insight { margin-top: 1.25rem; } .result-actions { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 1rem; }
